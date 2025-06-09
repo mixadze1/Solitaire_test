@@ -23,6 +23,8 @@ I also added debug logs to make testing and debugging easier.
 
 - The "***MoveAction***" class should have its fields set to private, and a constructor should be created.
 
+- The undo system would be better to endure to another component instead of "***SpotsController***". 
+
 
 https://github.com/user-attachments/assets/36f94147-ce85-4f9b-939f-aad862dc20b3
 
