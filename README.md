@@ -17,9 +17,11 @@ I also added debug logs to make testing and debugging easier.
 - The MoveAction class, to save time and focus on core gameplay.
 
 ## What I'd improve with more time
-I'd make spots more flexible. Currently, their positions and configurations are hardcoded in the scene. It would be better to make this dynamic so we can easily adjust the number of spots and cards per spot.
+- I'd make spots more flexible. Currently, their positions and configurations are hardcoded in the scene. It would be better to make this dynamic so we can easily adjust the number of spots and cards per spot.
 
-I'd implement logic to transition from scene initialization to the Game class more cleanly.
+- I'd implement logic to transition from scene initialization to the Game class more cleanly.
+
+- ***The "MoveAction" class should have its fields set to private, and a constructor should be created.***
 
 
 https://github.com/user-attachments/assets/36f94147-ce85-4f9b-939f-aad862dc20b3
