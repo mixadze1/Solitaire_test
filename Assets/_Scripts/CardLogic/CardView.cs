@@ -7,6 +7,8 @@ namespace _Scripts.CardLogic
     {
         [SerializeField] private TextMeshProUGUI _numberView;
 
+        public string ValueCard => _numberView.text;
+
         public void Initialize(int numberCard)
         {
             _numberView.text = numberCard.ToString();

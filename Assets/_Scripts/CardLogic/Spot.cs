@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using _Scripts.GameLogic;
 
@@ -16,7 +17,8 @@ namespace _Scripts.CardLogic
         private CardView _draggingCard;
         private Camera _camera;
         private Canvas _canvas;
-
+        public event Action<Spot, Spot, CardView> OnCardMoved;
+        
         public void Initialize(GameConfig config, Camera camera, Canvas canvas)
         {
             _camera = camera;
@@ -81,15 +83,17 @@ namespace _Scripts.CardLogic
             {
                 RemoveCard(_draggingCard);
                 targetSpot.AddCard(_draggingCard);
+
+                OnCardMoved?.Invoke(this, targetSpot, _draggingCard);
             }
             else
             {
-                UpdateCardPositions(); 
+                UpdateCardPositions();
             }
 
             _draggingCard = null;
         }
-
+        
         private void UpdateCardPositions()
         {
             for (int i = 0; i < _cards.Count; i++)

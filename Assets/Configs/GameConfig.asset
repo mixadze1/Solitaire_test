@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3971781e4a4c9484a64a233544192f, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  _amountCardsInGame: 35
+  _amountCardsInGame: 25
   _minMaxValueCard: {x: 1, y: 10}
   _cardYOffset: 70

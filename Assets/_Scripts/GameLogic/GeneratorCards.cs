@@ -24,7 +24,7 @@ namespace _Scripts.GameLogic
                 var instance = Object.Instantiate(cardPrefab);
                 cardList.Add(instance);
             }
-
+            Logger.Log("[generator]Generated Cards!", Color.white);
             return cardList;
         }
     }
