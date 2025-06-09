@@ -40,6 +40,8 @@ namespace _Scripts.CardLogic
 
         private void RegisterMove(Spot from, Spot to, CardView card)
         {
+            from.RemoveCard(card); 
+            to.AddCard(card);
             _moveHistory.Push(new MoveAction { From = from, To = to, Card = card });
             Logger.Log($"[Spots controller] Add move history From: {from.name}, To: {to.name}, card Value: {card.ValueCard}, Amount:{_moveHistory.Count}.", Color.green);
         }

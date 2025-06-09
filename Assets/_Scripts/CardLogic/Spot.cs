@@ -81,9 +81,6 @@ namespace _Scripts.CardLogic
 
             if (targetSpot != null && targetSpot != this)
             {
-                RemoveCard(_draggingCard);
-                targetSpot.AddCard(_draggingCard);
-
                 OnCardMoved?.Invoke(this, targetSpot, _draggingCard);
             }
             else
